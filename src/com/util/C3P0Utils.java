@@ -1,4 +1,4 @@
-package com.util;
+/*package java.com.util;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import java.sql.Connection;
@@ -15,7 +15,7 @@ public class C3P0Utils {
             dataSource.setUser("root");
             dataSource.setPassword("root");
             
-            
+
             dataSource.setInitialPoolSize(5);
             dataSource.setMinPoolSize(5);
             dataSource.setMaxPoolSize(20);
@@ -37,4 +37,4 @@ public class C3P0Utils {
             dataSource.close();
         }
     }
-}
+}*/

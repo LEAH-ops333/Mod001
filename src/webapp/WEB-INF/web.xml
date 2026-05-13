@@ -5,10 +5,9 @@
                              https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
 
-    <!-- 欢迎文件列表：解决直接访问 /mod001/ 时 404 的问题 -->
+    <!-- 欢迎文件列表 -->
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
-        <welcome-file>test.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
 </web-app>

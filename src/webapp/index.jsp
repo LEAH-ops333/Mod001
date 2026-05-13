@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>success</title>
+    <meta http-equiv="Refresh" content="0; url=<%= request.getContextPath() %>/home">
 </head>
 <body>
     <meta charset="UTF-8">
