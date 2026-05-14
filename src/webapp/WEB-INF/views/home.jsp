@@ -199,12 +199,12 @@
 
             drawPie();
             var pageUrls = [
-                "${pageContext.request.contextPath}/A.jsp",
-                "${pageContext.request.contextPath}/B.jsp",
-                "${pageContext.request.contextPath}/C.jsp",
-                "${pageContext.request.contextPath}/D.jsp",
-                "${pageContext.request.contextPath}/E.jsp",
-                "${pageContext.request.contextPath}/F.jsp"
+                "${pageContext.request.contextPath}/redirect.jsp?page=A",
+                "${pageContext.request.contextPath}/redirect.jsp?page=B",
+                "${pageContext.request.contextPath}/redirect.jsp?page=C",
+                "${pageContext.request.contextPath}/redirect.jsp?page=D",
+                "${pageContext.request.contextPath}/redirect.jsp?page=E",
+                "${pageContext.request.contextPath}/redirect.jsp?page=F"
             ];
 
 // 添加点击事件
