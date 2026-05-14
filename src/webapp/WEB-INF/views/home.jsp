@@ -27,7 +27,7 @@
 
         .pie-container {
             margin-left: 5%;
-            margin-top: 40px;
+            margin-top: 1%;
         }
 
         canvas {
@@ -46,16 +46,25 @@
         }
 
         .welcome-title h1 {
-            font-size: 3rem;
+            font-size: 5rem;
+            -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.65);
+            text-stroke: 1.2px rgba(255, 255, 255, 0.65);
+            letter-spacing: 1px;
         }
 
         .sub-title {
             text-align: right;
             margin-top: 45px;
-            margin-right: 20px;
-            color: rgba(173, 216, 245, 0.85);
-            text-shadow: rgba(20, 62, 120, 0.85);
+            margin-right: 30px;
+            color: rgba(80, 60, 180, 0.85);
             font-weight: bold;
+        }
+
+        .sub-title h1 {
+            -webkit-text-stroke: 3px rgba(255, 255, 255, 0.7);
+            text-stroke: 1.2px rgba(255, 255, 255, 0.7);
+            text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -87,12 +96,10 @@
         // ========== 在这里自定义你的7个分类文字 ==========
         const labels = [
             "我的介绍",      // 第1个扇形
-            "B",      // 第2个扇形
-            "C",      // 第3个扇形
-            "D",      // 第4个扇形
-            "E",      // 第5个扇形
-            "F",      // 第6个扇形
-            "G"       // 第7个扇形
+            "兴趣",      // 第2个扇形
+            "优势",      // 第3个扇形
+            "xxx",      // 第4个扇形
+            "xxx"
         ];
         // 如果你需要修改为其他文字，直接修改上面数组即可。
         // 注意：文字长度建议不超过4个中文字，否则可能超出扇形区域。
@@ -150,17 +157,17 @@
             ctx.stroke();
 
             // 绘制自定义文字
-            const textRadius = radius * 0.80;
+            const textRadius = radius * 0.78;  // 往里收一点，避免字跑出扇形
             const x = cx + Math.cos(sector.midAngle) * textRadius;
             const y = cy + Math.sin(sector.midAngle) * textRadius;
-            let fontSize = 160;   // 直接固定为 160px，你也可以改成 200、240 等
-            // 如果文字较长，稍微缩小一点
-            if (sector.label.length > 4) fontSize = 140;
+
+            let fontSize = 40;
+            if (sector.label.length > 4) fontSize = 32;
+
             ctx.font = `bold ${fontSize}px "Segoe UI", Arial`;
             ctx.fillStyle = "#FFFFFF";
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
-            // 先描边再填充
             ctx.fillText(sector.label, x, y);
 
             ctx.restore();
